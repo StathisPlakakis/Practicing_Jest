@@ -3,4 +3,11 @@ function capitalize(input) {
   return input.charAt(0).toUpperCase() + input.slice(1);
 }
 
-export default capitalize
+function reverseString(input) {
+  return input.split('').reverse().join('');
+}
+
+export {
+  capitalize,
+  reverseString
+}

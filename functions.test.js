@@ -1,4 +1,7 @@
-import capitalize from "./functions";
+import {
+  capitalize,
+  reverseString
+} from "./functions";
 
 test('Capitalize function', () => {
   const testCases = [
@@ -40,6 +43,6 @@ test('ReverseString function', () => {
     }
   ]
   testCases.forEach(testCase => {
-    expect(reverseString(testCase.received).toBe(testCase.expected));
+    expect(reverseString(testCase.received)).toBe(testCase.expected);
   })
 });
