@@ -2,7 +2,8 @@ import {
   capitalize,
   reverseString,
   Calculator,
-  caesarCipher
+  caesarCipher,
+  analyzeArray
 }
 from "./functions";
 
@@ -204,4 +205,10 @@ test('Analize Array Function', () => {
       }
     }
   ]
+  testCases.forEach(testCase => {
+    expect(analyzeArray(testCase.received).average).toBeCloseTo(testCase.expected.average);
+    expect(analyzeArray(testCase.received).min).toEqual(testCase.expected.min);
+    expect(analyzeArray(testCase.received).max).toEqual(testCase.expected.max);
+    expect(analyzeArray(testCase.received).length).toEqual(testCase.expected.length);
+  })
 })
