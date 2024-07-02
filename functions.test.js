@@ -124,27 +124,27 @@ test('Calculator Division', () => {
   })
 })
 
-// test('Calculator Subtraction', () => {
-//   const testCases = [
-//     {
-//       receivedFirst: 10,
-//       receivedSecond: 10,
-//       expected: 0
-//     },
-//     {
-//       receivedFirst: 1,
-//       receivedSecond: 3,
-//       expected: -2
-//     },
-//     {
-//       receivedFirst: -10,
-//       receivedSecond: 10,
-//       expected: -20
-//     }
-//   ]
-//   testCases.forEach(testCase => {
-//     expect(new Calculator()
-//           .subtract(testCase.receivedFirst, testCase.receivedSecond))
-//           .toBe(testCase.expected)
-//   })
-// })
+test('Calculator Multiplication', () => {
+  const testCases = [
+    {
+      receivedFirst: 10,
+      receivedSecond: 10,
+      expected: 100
+    },
+    {
+      receivedFirst: -1,
+      receivedSecond: -3,
+      expected: 3
+    },
+    {
+      receivedFirst: -10,
+      receivedSecond: 10,
+      expected: -100
+    }
+  ]
+  testCases.forEach(testCase => {
+    expect(new Calculator()
+          .multiplication(testCase.receivedFirst, testCase.receivedSecond))
+          .toBe(testCase.expected)
+  })
+})
