@@ -173,3 +173,35 @@ test('Caesar Cipher Function', () => {
     .toBe(testCase.expected);
   })
 })
+
+test('Analize Array Function', () => {
+  const testCases = [
+    {
+      received: [1,8,3,4,2,6],
+      expected: {
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+      }
+    },
+    {
+      received: [11,3,8,3,4,2,6,9,-1],
+      expected: {
+        average: 5,
+        min: -1,
+        max: 11,
+        length: 9
+      }
+    },
+    {
+      received: [1,2,-2],
+      expected: {
+        average: 0.33,
+        min: -2,
+        max: 2,
+        length: 3
+      }
+    }
+  ]
+})
