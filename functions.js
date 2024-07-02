@@ -7,7 +7,14 @@ function reverseString(input) {
   return input.split('').reverse().join('');
 }
 
+class Calculator {
+  add(a, b) {
+    return a + b;
+  }
+}
+
 export {
   capitalize,
-  reverseString
+  reverseString,
+  Calculator
 }

@@ -1,7 +1,8 @@
 import {
   capitalize,
-  reverseString
-} 
+  reverseString,
+  Calculator
+}
 from "./functions";
 
 test('Capitalize function', () => {
@@ -55,16 +56,16 @@ test('Calculator Addition', () => {
       receivedSecond: 5,
       expected: 8
     },
-    // {
-    //   receivedFirst: 4,
-    //   receivedSecond: 15,
-    //   expected: 19
-    // },
-    // {
-    //   receivedFirst: -3,
-    //   receivedSecond: 5,
-    //   expected: 2
-    // }
+    {
+      receivedFirst: 4,
+      receivedSecond: 15,
+      expected: 19
+    },
+    {
+      receivedFirst: -3,
+      receivedSecond: 5,
+      expected: 2
+    }
   ]
   testCases.forEach(testCase => {
     expect(new Calculator().add(testCase.receivedFirst, testCase.receivedSecond)).toBe(testCase.expected);
