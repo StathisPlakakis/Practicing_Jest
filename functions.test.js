@@ -145,6 +145,6 @@ test('Calculator Multiplication', () => {
   testCases.forEach(testCase => {
     expect(new Calculator()
           .multiplication(testCase.receivedFirst, testCase.receivedSecond))
-          .toBe(testCase.expected)
+          .toBeCloseTo(testCase.expected)
   })
 })

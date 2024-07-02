@@ -19,6 +19,10 @@ class Calculator {
   divide(a, b) {
     return a / b;
   }
+
+  multiplication(a, b) {
+    return a * b;
+  }
 }
 
 export {
