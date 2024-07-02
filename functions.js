@@ -25,8 +25,13 @@ class Calculator {
   }
 }
 
+function caesarCipher(string, key) {
+  return
+}
+
 export {
   capitalize,
   reverseString,
-  Calculator
+  Calculator,
+  caesarCipher
 }

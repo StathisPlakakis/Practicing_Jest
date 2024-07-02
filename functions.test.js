@@ -1,7 +1,8 @@
 import {
   capitalize,
   reverseString,
-  Calculator
+  Calculator,
+  caesarCipher
 }
 from "./functions";
 
@@ -146,5 +147,29 @@ test('Calculator Multiplication', () => {
     expect(new Calculator()
           .multiplication(testCase.receivedFirst, testCase.receivedSecond))
           .toBeCloseTo(testCase.expected)
+  })
+})
+
+test('Caesar Cipher Function', () => {
+  const testCases = [
+    {
+      receivedString: 'xyz',
+      receiveKey: 3,
+      expected: 'abc'
+    },
+    // {
+    //   receivedString: 'HeLLo',
+    //   receiveKey: 4,
+    //   expected: 'LiPPs'
+    // },
+    // {
+    //   receivedString: 'Hello, World!',
+    //   receiveKey: 3,
+    //   expected: 'Khoor, Zruog!'
+    // }
+  ]
+  testCases.forEach(testCase => {
+    expect(caesarCipher(testCase.receivedString, testCase.receiveKey))
+    .toBe(testCase.expected);
   })
 })
