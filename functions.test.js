@@ -68,6 +68,83 @@ test('Calculator Addition', () => {
     }
   ]
   testCases.forEach(testCase => {
-    expect(new Calculator().add(testCase.receivedFirst, testCase.receivedSecond)).toBe(testCase.expected);
+    expect(new Calculator()
+          .add(testCase.receivedFirst, testCase.receivedSecond))
+          .toBe(testCase.expected);
   })
 })
+
+test('Calculator Subtraction', () => {
+  const testCases = [
+    {
+      receivedFirst: 10,
+      receivedSecond: 10,
+      expected: 0
+    },
+    {
+      receivedFirst: 1,
+      receivedSecond: 3,
+      expected: -2
+    },
+    {
+      receivedFirst: -10,
+      receivedSecond: 10,
+      expected: -20
+    }
+  ]
+  testCases.forEach(testCase => {
+    expect(new Calculator()
+          .subtract(testCase.receivedFirst, testCase.receivedSecond))
+          .toBe(testCase.expected)
+  })
+})
+
+test('Calculator Division', () => {
+  const testCases = [
+    {
+      receivedFirst: 5,
+      receivedSecond: 5,
+      expected: 1
+    },
+    {
+      receivedFirst: 15,
+      receivedSecond: 13,
+      expected: 1.15
+    },
+    {
+      receivedFirst: 32,
+      receivedSecond: 523,
+      expected: 0.06
+    }
+  ]
+  testCases.forEach(testCase => {
+    expect(new Calculator()
+          .divide(testCase.receivedFirst, testCase.receivedSecond))
+          .toBeCloseTo(testCase.expected);
+  })
+})
+
+// test('Calculator Subtraction', () => {
+//   const testCases = [
+//     {
+//       receivedFirst: 10,
+//       receivedSecond: 10,
+//       expected: 0
+//     },
+//     {
+//       receivedFirst: 1,
+//       receivedSecond: 3,
+//       expected: -2
+//     },
+//     {
+//       receivedFirst: -10,
+//       receivedSecond: 10,
+//       expected: -20
+//     }
+//   ]
+//   testCases.forEach(testCase => {
+//     expect(new Calculator()
+//           .subtract(testCase.receivedFirst, testCase.receivedSecond))
+//           .toBe(testCase.expected)
+//   })
+// })
