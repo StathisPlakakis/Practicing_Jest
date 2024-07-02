@@ -157,16 +157,16 @@ test('Caesar Cipher Function', () => {
       receiveKey: 3,
       expected: 'abc'
     },
-    // {
-    //   receivedString: 'HeLLo',
-    //   receiveKey: 4,
-    //   expected: 'LiPPs'
-    // },
-    // {
-    //   receivedString: 'Hello, World!',
-    //   receiveKey: 3,
-    //   expected: 'Khoor, Zruog!'
-    // }
+    {
+      receivedString: 'HeLLo',
+      receiveKey: 4,
+      expected: 'LiPPs'
+    },
+    {
+      receivedString: 'Hello, World!',
+      receiveKey: 3,
+      expected: 'Khoor, Zruog!'
+    }
   ]
   testCases.forEach(testCase => {
     expect(caesarCipher(testCase.receivedString, testCase.receiveKey))
